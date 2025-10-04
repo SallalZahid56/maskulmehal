@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { Search, User, ShoppingBag, Menu, X } from "lucide-react"; // Added Menu + X icons
+import { Link } from "react-router-dom";
+import { Search, User, ShoppingCart, Menu, X } from "lucide-react";
 import logo from "../assets/logo.jpg"; // adjust path based on Navbar.jsx location
 
 
@@ -13,7 +14,7 @@ const Navbar = () => {
 
                 {/* Left Links (Desktop Only) */}
                 <div className="hidden md:flex items-center gap-6">
-                    <a href="#" className="font-medium hover:underline">Home</a>
+                    <Link to="/" className="font-medium hover:underline">Home</Link>
                     <div className="relative group">
                         <a href="#" className="font-medium flex items-center">
                             Shop <span className="ml-1">▼</span>
@@ -24,8 +25,8 @@ const Navbar = () => {
                             <a href="#" className="block px-3 py-1 hover:bg-gray-100">Attars</a>
                         </div>
                     </div>
-                    <a href="#" className="font-medium hover:underline">Contact Us</a>
-                    <a href="#" className="font-medium hover:underline">About Us</a>
+                    <Link to="/contact-us" className="font-medium hover:underline">Contact Us</Link>
+                    <Link to="/about-us" className="font-medium hover:underline">About Us</Link>
                 </div>
 
                 {/* Center Logo */}
@@ -37,8 +38,10 @@ const Navbar = () => {
                 <div className="flex items-center gap-6">
                     <Search className="w-5 h-5 cursor-pointer hover:text-blue-600" />
                     <User className="w-5 h-5 cursor-pointer hover:text-blue-600" />
-                    <ShoppingBag className="w-5 h-5 cursor-pointer hover:text-blue-600" />
-
+                    {/* Cart Icon → Link to Product Page */}
+                    <Link to="/product/1">
+                        <ShoppingCart className="w-5 h-5 cursor-pointer hover:text-blue-600" />
+                    </Link>
                     {/* Hamburger (Mobile Only) */}
                     <button
                         className="md:hidden focus:outline-none"
