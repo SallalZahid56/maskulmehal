@@ -16,7 +16,7 @@ const AboutUs = () => {
         We take pride in offering authentic and long-lasting scents for every occasion.
       </p>
       <p className="text-gray-600 max-w-3xl mx-auto mb-12">
-        Our mission is to redefine elegance through fragrance, 
+        Our mission is to provide elegance through fragrance, 
         combining tradition and modernity in every bottle. 
         Discover products that reflect your personality and enhance your style.
       </p>
